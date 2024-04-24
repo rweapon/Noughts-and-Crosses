@@ -33,9 +33,7 @@ p {
 .cross-img,
 .circle-img {
   display: none;
-  /* display: block; */
   transition: 50ms ease-out;
-  /* transform: scale(2); */
 }
 
 .main {
@@ -179,5 +177,12 @@ p {
 
   .play-area {
     order: 2;
+  }
+  @media (-webkit-transition) {
+    .cross-img,
+    .circle-img {
+      transition: none;
+      -webkit-transition: 50ms ease-out;
+    }
   }
 }
