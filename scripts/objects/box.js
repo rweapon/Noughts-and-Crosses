@@ -27,10 +27,7 @@ const box = {
 
   boxPopUp(index) {
     let el = this.$box[index].firstElementChild;
-    el.style.display = "block";
-    setTimeout(() => {
-      el.style.webkitTransform = "scale(2)";
-    }, 10);
+    this.show(el);
   },
 
   ticTacFlicker(winnerLine) {
