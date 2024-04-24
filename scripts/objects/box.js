@@ -27,7 +27,7 @@ const box = {
 
   boxPopUp(index) {
     let el = this.$box[index].firstElementChild;
-    this.show(el);
+    show(el);
   },
 
   ticTacFlicker(winnerLine) {

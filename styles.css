@@ -64,7 +64,7 @@ p {
 
 .menu__button {
   padding: 10px 15px;
-  font-family: "Eurostile";
+  font-family: "Eurostile", system-ui, -apple-system, sans-serif;
   font-size: clamp(20px, 2vw, 24px);
   border: none;
   border-radius: 5px;
