@@ -178,11 +178,9 @@ p {
   .play-area {
     order: 2;
   }
-  @media (-webkit-transition) {
-    .cross-img,
-    .circle-img {
-      transition: none;
-      -webkit-transition: 50ms ease-out;
-    }
+  .cross-img,
+  .circle-img {
+    transition: none;
+    -webkit-transition: -webkit-transform 50ms ease-out;
   }
 }
