@@ -10,7 +10,7 @@ const box = {
     let style = "";
     if (this.$box.length === 9) {
       if (this.$box[i].hasChildNodes())
-        style = 'style = "display: block; transform: scale(2)"';
+        style = 'style = "display: block; -webkit-transform: scale(2)"';
     }
     if (!sign) return "";
     else if (sign === "x") string = "cross";
@@ -29,7 +29,7 @@ const box = {
     let el = this.$box[index].firstElementChild;
     el.style.display = "block";
     setTimeout(() => {
-      el.style.transform = "scale(2)";
+      el.style.webkitTransform = "scale(2)";
     }, 10);
   },
 
@@ -64,11 +64,11 @@ const box = {
     }
 
     function hide(shape) {
-      shape.style = "display: none; transform: scale(1)";
+      shape.style = "display: none; -webkit-transform: scale(1)";
     }
 
     function show(shape) {
-      shape.style = "display: block; transform: scale(2)";
+      shape.style = "display: block; -webkit-transform: scale(2)";
     }
   },
 };
