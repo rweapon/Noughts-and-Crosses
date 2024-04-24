@@ -16,7 +16,7 @@ body {
   --grid-template: repeat(3, var(--box-size));
   --grid-size: max(300px, calc(100vw / 3));
   --grid-gap: 15px;
-  --box-size: calc(var(--grid-size) / 3 - (var(--grid-gap)/1.6));
+  --box-size: calc(var(--grid-size) / 3 - (var(--grid-gap) / 1.6));
   --img-size: calc(var(--box-size) * 0.4);
   --score-gap: 20px;
 }
@@ -33,6 +33,9 @@ p {
 .cross-img,
 .circle-img {
   display: none;
+  /* display: block; */
+  transition: 50ms ease-out;
+  /* transform: scale(2); */
 }
 
 .main {
@@ -144,13 +147,11 @@ p {
   margin-top: 10px;
 }
 
-.crosses,
-.noughts {
+.names__signs {
   display: grid;
   justify-items: center;
 }
-.crosses img,
-.noughts img {
+.names__signs img {
   width: 25px;
   height: 25px;
 }
