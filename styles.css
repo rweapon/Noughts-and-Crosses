@@ -28,7 +28,7 @@ p {
 .cross-img,
 .circle-img {
   display: none;
-  /* transition: 50ms ease-out; */
+  transition: 50ms ease-out;
   -webkit-transition: -webkit-transform 50ms ease-out;
 }
 

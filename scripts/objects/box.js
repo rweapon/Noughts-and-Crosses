@@ -27,7 +27,10 @@ const box = {
 
   boxPopUp(index) {
     let el = this.$box[index].firstElementChild;
-    el.style = "display: block; -webkit-transform: scale(2)";
+    el.style = "display: block;
+    setTimeout(() => {
+      el.style = "display: block; -webkit-transform: scale(2)"
+    }, 10)
   },
 
   ticTacFlicker(winnerLine) {
