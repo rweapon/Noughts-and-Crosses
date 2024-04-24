@@ -1,11 +1,6 @@
-@font-face {
-  font-family: "Eurostile";
-  src: url();
-}
-
 body {
   background-color: var(--bg-color);
-  font-family: "Eurostile";
+  font-family: "Eurostile", system-ui, -apple-system, sans-serif;
   font-size: clamp(20px, 2vw, 24px);
   color: var(--color);
   overflow: hidden;
