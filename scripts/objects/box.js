@@ -10,12 +10,13 @@ const box = {
     let style = "";
     if (this.$box.length === 9) {
       if (this.$box[i].hasChildNodes())
-        style = 'style = "display: block; -webkit-transform: scale(2)"';
+        style = 'style = "display: block;" popped';
+        // style = ;
     }
     if (!sign) return "";
     else if (sign === "x") string = "cross";
     else string = "circle";
-    return `<img src="img/${string}.png" class="${string}-img" ${style}>`;
+    return `<img src="img/${string}.png" class="sign-img" ${style}>`;
   },
 
   clearAll() {
@@ -27,10 +28,11 @@ const box = {
 
   boxPopUp(index) {
     let el = this.$box[index].firstElementChild;
-    el.style = "display: block;"
+    el.style = "display: block;";
     setTimeout(() => {
-      el.style = "display: block; -webkit-transform: scale(2)"
-    }, 10)
+      el.setAttribute("popped", "");
+      // el.style = "display: block; -webkit-transform: scale(2)";
+    }, 10);
   },
 
   ticTacFlicker(winnerLine) {
@@ -63,12 +65,14 @@ const box = {
       }, 300);
     }
 
-    function hide(shape) {
-      shape.style = "display: none; -webkit-transform: scale(1)";
+    function hide(el) {
+      el.style = "display: none;";
+      el.removeAttribute("popped");
     }
 
-    function show(shape) {
-      shape.style = "display: block; -webkit-transform: scale(2)";
+    function show(el) {
+      el.style = "display: block;";
+      el.setAttribute("popped", "");
     }
   },
 };

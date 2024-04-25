@@ -1,7 +1,7 @@
 body {
   background-color: var(--bg-color);
-  font-family: "Eurostile", system-ui, -apple-system, sans-serif;
-  font-size: clamp(20px, 2vw, 24px);
+  font-family: var(--font);
+  font-size: var(--font-size);
   color: var(--color);
   overflow: hidden;
   cursor: default;
@@ -14,6 +14,13 @@ body {
   --box-size: calc(var(--grid-size) / 3 - (var(--grid-gap) / 1.6));
   --img-size: calc(var(--box-size) * 0.4);
   --score-gap: 20px;
+  --font: "Eurostile", system-ui, -apple-system, sans-serif;
+  --font-300: 1.25rem;
+  --font-400: 1.375rem;
+  --font-500: 1.4rem;
+  --font-600: 1.625rem;
+  --font-size-btn: clamp(var(--font-300), 2vw, var(--font-500));
+  --font-size: clamp(var(--font-400), 2vw, var(--font-600));
 }
 
 p {
@@ -25,11 +32,15 @@ p {
   height: var(--img-size);
 }
 
-.cross-img,
-.circle-img {
+.sign-img {
   display: none;
-  /*transition: 50ms ease-out;*/
-  -webkit-transition: -webkit-transform 50ms ease-out;
+  transition: 50ms ease-out;
+}
+
+.sign-img[popped] {
+  /* display: block; */
+  transform-origin: center;
+  transform: scale(2);
 }
 
 .main {
@@ -64,8 +75,8 @@ p {
 
 .menu__button {
   padding: 10px 15px;
-  font-family: "Eurostile", system-ui, -apple-system, sans-serif;
-  font-size: clamp(20px, 2vw, 24px);
+  font-family: var(--font);
+  font-size: var(--font-size-btn);
   border: none;
   border-radius: 5px;
   background: var(--color);
@@ -176,10 +187,15 @@ p {
   }
 }
 
-/* @media (-webkit-transition) {
-  .cross-img,
-  .circle-img {
+@media (-webkit-transition) {
+  .sign-img {
     transition: none;
-    -webkit-transition: -webkit-transform 50ms ease-out;
+    -webkit-transition: 50ms ease-out;
   }
-} */
+  .sign-img[popped] {
+    transform-origin: none;
+    transform: none;
+    -webkit-transform-origin: center;
+    -webkit-transform: scale(2);
+  }
+}
