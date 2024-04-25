@@ -187,10 +187,10 @@ p {
   }
 }
 
-@media (-webkit-transition) {
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   .sign-img {
     transition: none;
-    -webkit-transition: 50ms ease-out;
+    -webkit-transition: -webkit-transform 50ms ease-out;
   }
   .sign-img[popped] {
     transform-origin: none;
