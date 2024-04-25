@@ -5,6 +5,7 @@ body {
   color: var(--color);
   overflow: hidden;
   cursor: default;
+  user-select: none;
 
   --bg-color: rgb(25, 25, 25);
   --color: rgb(232, 232, 232);

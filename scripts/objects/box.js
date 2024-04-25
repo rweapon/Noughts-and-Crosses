@@ -11,12 +11,12 @@ const box = {
     if (this.$box.length === 9) {
       if (this.$box[i].hasChildNodes())
         style = 'style = "display: block;" popped';
-        // style = ;
+      // style = ;
     }
     if (!sign) return "";
     else if (sign === "x") string = "cross";
     else string = "circle";
-    return `<img src="img/${string}.png" class="sign-img" ${style}>`;
+    return `<img draggable="false" src="img/${string}.png" class="sign-img" ${style}>`;
   },
 
   clearAll() {
