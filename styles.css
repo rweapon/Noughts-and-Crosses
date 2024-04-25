@@ -28,22 +28,6 @@ p {
   margin: 0;
 }
 
-.play-area__boxes img {
-  width: var(--img-size);
-  height: var(--img-size);
-}
-
-.sign-img {
-  display: none;
-  transition: 50ms ease-out;
-}
-
-.sign-img[popped] {
-  /* display: block; */
-  transform-origin: center;
-  transform: scale(2);
-}
-
 .main {
   display: flex;
   flex-direction: row;
@@ -130,6 +114,24 @@ p {
   justify-items: center;
 }
 
+.play-area__boxes img {
+  width: var(--img-size);
+  height: var(--img-size);
+}
+
+.sign-img {
+  display: none;
+  -webkit-transition: all 50ms ease-out;
+  transition: all 50ms ease-out;
+}
+
+.sign-img[popped] {
+  /* display: block; */
+  transform-origin: center;
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+
 .score-bar {
   display: flex;
   flex-direction: column;
@@ -188,10 +190,10 @@ p {
   }
 }
 
-@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+/* @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   .sign-img {
     transition: none;
-    -webkit-transition: -webkit-transform 50ms ease-out;
+    -webkit-transition: all 50ms ease-out;
   }
   .sign-img[popped] {
     transform-origin: none;
@@ -199,4 +201,4 @@ p {
     -webkit-transform-origin: center;
     -webkit-transform: scale(2);
   }
-}
+} */
