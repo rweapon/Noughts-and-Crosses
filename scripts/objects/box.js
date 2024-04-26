@@ -1,4 +1,5 @@
 import { boxes, result } from "../data/dataArrays.js";
+import shapes from "../data/shapes.js";
 
 const box = {
   get $box() {
@@ -8,15 +9,22 @@ const box = {
   addSign(sign, i) {
     let string;
     let style = "";
-    if (this.$box.length === 9) {
-      if (this.$box[i].hasChildNodes())
-        style = 'style = "display: block;" popped';
-      // style = ;
-    }
+    let el;
     if (!sign) return "";
-    else if (sign === "x") string = "cross";
-    else string = "circle";
-    return `<img draggable="false" src="img/${string}.png" class="sign-img" ${style}>`;
+    else if (sign === "x") string = shapes.x;
+    else string = shapes.o;
+    if (this.$box.length === 9) {
+      if (this.$box[i].hasChildNodes()) {
+        console.log(string)
+        string = string.replace("style", 'style = "display: block;" popped');
+        console.log(string)
+        // el = this.$box[i].firstElementChild;
+        // el.style = "display: block;";
+        // el.setAttribute("popped", "");
+      }
+    }
+    return string;
+    // return `<img draggable="false" src="img/${string}.png" class="sign-img" ${style}>`;
   },
 
   clearAll() {
@@ -26,8 +34,8 @@ const box = {
     });
   },
 
-  boxPopUp(index) {
-    let el = this.$box[index].firstElementChild;
+  boxPopUp(i) {
+    let el = this.$box[i].firstElementChild;
     el.style = "display: block;";
     setTimeout(() => {
       el.setAttribute("popped", "");

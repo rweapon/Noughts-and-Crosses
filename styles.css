@@ -8,6 +8,7 @@ body {
   user-select: none;
 
   --bg-color: rgb(25, 25, 25);
+  --menu-color: rgba(25, 25, 25, 0.8);
   --color: rgb(232, 232, 232);
   --grid-template: repeat(3, var(--box-size));
   --grid-size: max(300px, calc(100vw / 3));
@@ -45,7 +46,8 @@ p {
   justify-content: center;
   width: var(--grid-size);
   height: var(--grid-size);
-  background-color: rgba(25, 25, 25, 0.8);
+  background-color: var(--menu-color);
+  color: var(--color);
   z-index: 100;
 }
 
@@ -121,6 +123,8 @@ p {
 
 .sign-img {
   display: none;
+  fill: var(--color);
+  stroke: var(--color);
   -webkit-transition: all 50ms ease-out;
   transition: all 50ms ease-out;
 }
@@ -132,6 +136,10 @@ p {
   transform: scale(2); */
   width: calc(var(--img-size) * 2);
   height: calc(var(--img-size) * 2);
+}
+
+.sign-img--cross {
+  stroke: none;
 }
 
 .score-bar {
@@ -161,10 +169,18 @@ p {
   display: grid;
   justify-items: center;
 }
-.names__signs img {
+.names__signs svg {
   width: 25px;
   height: 25px;
+  fill: var(--color);
+  stroke: var(--color);
 }
+/* .svg {
+  width: 25px;
+  height: 25px;
+  fill: var(--color);
+  stroke: var(--color);
+} */
 
 @media (max-height: 450px) {
   .main {
@@ -175,6 +191,9 @@ p {
 @media (max-width: 550px) {
   body {
     --score-gap: 10px;
+    /* --bg-color: rgb(232, 232, 232);
+    --menu-color: rgba(232, 232, 232, 0.8);
+    --color: rgb(25, 25, 25); */
   }
 
   .score-bar {
