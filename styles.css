@@ -127,9 +127,11 @@ p {
 
 .sign-img[popped] {
   /* display: block; */
-  transform-origin: center;
-  -webkit-transform: scale(2);
-  transform: scale(2);
+  /* transform-origin: center; */
+  /* -webkit-transform: scale(2);
+  transform: scale(2); */
+  width: calc(var(--img-size) * 2);
+  height: calc(var(--img-size) * 2);
 }
 
 .score-bar {
