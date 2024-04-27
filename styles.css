@@ -168,13 +168,13 @@ button {
   display: flex;
   justify-items: center;
   align-items: center;
-  right: 5%;
-  top: 5%;
+  right: 2%;
+  top: 2%;
 }
 
 .color-switcher__item {
-  width: var(--img-size);
-  height: var(--img-size);
+  width: min(40px, var(--img-size));
+  height: min(40px, var(--img-size));
   stroke: var(--color);
 }
 
@@ -188,11 +188,11 @@ body[light] .item--sun {
 
 .score-bar__section {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .score {
-  gap: 70px;
+  gap: 55px;
 }
 
 .names p {
@@ -238,6 +238,6 @@ body[light] .item--sun {
 
 @media (max-width: 1000px) {
   .score-bar__color-switcher {
-    top: 2%;
+    right: 5%;
   }
 }
