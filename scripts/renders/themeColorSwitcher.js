@@ -1,6 +1,5 @@
 function switchColorTheme() {
-  let theme =
-    localStorage.getItem("theme") || localStorage.setItem("theme", "ligth");
+  let theme = localStorage.getItem("theme") || "light";
   document.body.setAttribute(theme, "");
   document.querySelector(".color-switcher").addEventListener("click", () => {
     if (document.body.hasAttribute("light")) {
