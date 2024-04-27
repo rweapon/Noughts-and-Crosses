@@ -2,8 +2,6 @@ const shapes = {
   x: `<svg
   style
   class="sign-img sign-img--cross"
-  width="64px"
-  height="64px"
   viewBox="0 0 25 25"
 >
   <g fill-rule="evenodd">
@@ -14,7 +12,7 @@ const shapes = {
     </g>
   </g>
 </svg>`,
-  o: ` <svg style class="sign-img" width="64px" height="64px" viewBox="0 0 22 22">
+  o: ` <svg style class="sign-img"  viewBox="0 0 22 22">
   <g>
     <circle
       cx="11"
