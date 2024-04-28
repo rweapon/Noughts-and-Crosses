@@ -5,7 +5,6 @@ import score from "../data/score.js";
 import renderMenu from "../renders/renderMenu.js";
 import { combs, boxes, logic, result } from "../data/dataArrays.js";
 
-
 export let winnerLine;
 
 export function playerMove() {
@@ -115,7 +114,6 @@ function calculateBestMove(computerBoxes, playerBoxes) {
         (comb[1] === minPlayer && comb[2] === maxPlayer)
       ) {
         playerComb = comb;
-        // continue;
       } else continue;
     }
 
